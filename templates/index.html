@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Realtime communication with WebRTC</title>
+
+  <link rel="stylesheet" href="/static/css/main.css"/>
+
+</head>
+
+<body>
+
+  <h1>Realtime communication with WebRTC</h1>
+
+  <div id="videoCanvas">
+    <video id="camera" autoplay playsinline></video>
+    <video id="videoElem" autoplay></video>
+    <video id="videoElem2" autoplay></video>
+    <canvas id="photo"></canvas>
+  </div>
+
+  <div id="buttons">
+    <button id="snap">Snap</button><span> then </span><button id="send">Send</button>
+    <span> or </span>
+    <button id="snapAndSend">Snap &amp; Send</button>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js" ></script>
+  <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+
+</body>
+
+</html>
